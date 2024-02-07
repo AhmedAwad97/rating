@@ -1,0 +1,132 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--Very-Dark-Blue);
+  color: var(--White);
+  font-family: "Overpass", sans-serif;
+}
+
+.card {
+  background-color: var(--Dark-Blue);
+  width: 400px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    width: 80%;
+  }
+}
+
+.icon {
+  background-color: hsl(210, 13%, 24%);
+  padding: 15px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.icon i {
+  color: orange;
+}
+
+p {
+  color: #777;
+  line-height: 1.6;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.number {
+  background-color: hsl(210, 13%, 24%);
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.number:hover {
+  background-color: var(--Medium-Grey);
+}
+
+input[type="radio"]:checked + .number {
+  background-color: rgb(230, 106, 17);
+  color: white;
+}
+
+input {
+  display: none;
+}
+
+.card button {
+  width: 100%;
+  border-radius: 20px;
+  padding: 15px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(230, 106, 17);
+  cursor: pointer;
+  transition: 0.6s;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  border: none;
+}
+
+button:hover {
+  background-color: white;
+  color: rgb(230, 106, 17);
+}
+
+.card.thank {
+  text-align: center;
+  display: none;
+}
+
+.card.thank span {
+  display: block;
+  background-color: hsl(210, 13%, 24%);
+  width: fit-content;
+  margin: 30px auto;
+  color: rgb(230, 106, 17);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.card.thank h3 {
+  font-size: 24px;
+}
